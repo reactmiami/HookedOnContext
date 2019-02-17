@@ -1,0 +1,13 @@
+.app {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(44, 209, 209),
+    rgb(224, 29, 224)
+  );
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

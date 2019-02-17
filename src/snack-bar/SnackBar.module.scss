@@ -1,0 +1,45 @@
+.wrapper {
+  position: absolute;
+  top: 0px;
+  animation: dropIn 0.6s ease-in-out;
+  height: 50px;
+  background-color: #4bb543;
+  box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 1;
+  width: 250px;
+  left: calc(50% - 125px);
+  border-radius: 0px 0px 6px 6px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25rem;
+  & i {
+    padding-left: 20px;
+    height: 100%;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  & div {
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.remove {
+  animation: riseUp 0.6s ease-in-out;
+}
+
+@keyframes dropIn {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+@keyframes riseUp {
+  to {
+    top: -50px;
+    opacity: 0;
+  }
+}

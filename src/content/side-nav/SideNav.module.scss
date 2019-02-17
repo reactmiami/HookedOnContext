@@ -1,0 +1,39 @@
+.profileCard {
+  height: 200px;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.name {
+  font-size: 1.5rem;
+}
+.route {
+  height: 50px;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+.routeInfo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  & i {
+    color: #2A76F6;
+    padding-left: 30px;
+    width: 10px;
+  }
+  & div {
+    padding-left: 20px;
+  }
+  &:hover {
+    transform: translateX(10px);
+    transition: all 0.3s;
+  }
+}
