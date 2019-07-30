@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import classes from "./Content.module.scss";
 import { SideNav } from "./side-nav";
 import { Form } from "./form";
 import { Settings } from "./settings";
 import { ProfileContext } from "../context";
 
-export const Content = _ => {
+export const Content = memo(_ => {
   const [activeContent, setActiveContent] = useState(
     window.location.pathname.split("/")[1] || "dashboard"
   );
@@ -33,4 +33,4 @@ export const Content = _ => {
       </div>
     </ProfileContext.Provider>
   );
-};
+});
