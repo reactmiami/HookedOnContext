@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import classes from "./Form.module.scss";
-import { SnackbarContext } from "../../context";
+import { GlobalContext } from "../../context";
 
 export const Form = _ => {
-  const { setMessage } = useContext(SnackbarContext);
+  const { dispatch } = useContext(GlobalContext);
+  console.log(`Rendering: Form. \nTotal renders: ${++window.totalRenders}`);
   return (
     <div className={classes.root}>
       <div className={classes.header}>Form</div>
@@ -98,7 +99,11 @@ export const Form = _ => {
           <input type="date" />
         </div>
         <div className={classes.button}>
-          <button onClick={_ => setMessage("Submission Success")}>
+          <button
+            onClick={_ =>
+              dispatch({ type: "setMessage", payload: "Submission Success" })
+            }
+          >
             Submit
           </button>
         </div>
