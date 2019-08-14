@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { SnackBar } from "./snack-bar";
-import { Content } from "./content";
-import classes from "./App.module.scss";
-import { SnackbarContext } from "./context";
+import React from 'react';
+import { SnackBar } from './snack-bar/SnackBar.renderProps';
+import { Content } from './content';
+import classes from './App.module.scss';
+import { SnackbarContextProvider } from './context';
 
 const App = _ => {
-  const [message, setMessage] = useState("");
+  console.log(`Rendering: App. \nTotal renders: ${++window.totalRenders}`);
   return (
-    <SnackbarContext.Provider value={{ setMessage }}>
-      <SnackBar message={message} setMessage={setMessage} />
+    <SnackbarContextProvider>
+      <SnackBar />
       <div className={classes.app}>
         <Content />
       </div>
-    </SnackbarContext.Provider>
+    </SnackbarContextProvider>
   );
 };
 
